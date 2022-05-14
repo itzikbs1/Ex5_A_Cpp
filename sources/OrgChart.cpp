@@ -15,6 +15,14 @@ OrgChart OrgChart::add_root(string str){
 OrgChart OrgChart::add_sub(string str1, string str2){
     return *this;
 }
+vector<string>::iterator OrgChart::begin(){
+    vector<string>::iterator vec;
+    return vec;
+}
+vector<string>::iterator OrgChart::end(){
+    vector<string>::iterator vec;
+    return vec;    
+}
 vector<string>::iterator OrgChart::begin_level_order(){
     vector<string>::iterator vec;
     return vec;
