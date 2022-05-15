@@ -17,7 +17,7 @@ TEST_CASE("Good Test"){
     .add_sub("CTO", "VP_SW") // Now the VP Software is subordinate to the CTO
     .add_sub("COO", "VP_BI")
     .add_sub("CFO", "VP_S");
-    cout<<"20"<<endl;
+    
     // SUBCASE("add a root and change him"){
     //     organization.add_root("root");
     //     organization.add_root("CEO");
@@ -35,12 +35,9 @@ TEST_CASE("Good Test"){
     SUBCASE("start with begin_level_order and end with end_level_order"){
         vector<string> vec;
         vec.clear();
-        cout<<"37"<<endl;
         for (auto it = organization.begin_level_order(); it != organization.end_level_order(); ++it){
-            cout<<"40!!!!"<<endl;
             vec.push_back((*it));
         }
-        cout<<"41"<<endl;
         CHECK(vec.at(0) == "CEO");
         CHECK(vec.at(1) == "CTO");
         CHECK(vec.at(2) == "CFO");
